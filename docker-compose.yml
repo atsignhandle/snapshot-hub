@@ -2,26 +2,26 @@ version: "3.7"
 services:
 
   # Snapshot hub
-  snapshot-hub:
-    build:
-      # Use the development `Dockerfile.dev`
-      context: .
-      dockerfile: Dockerfile.dev
-    container_name: snapshot-hub
-    env_file:
-      - ./.env.local
-    environment:
-      PORT: 8080
-      ENV: "local" # local | dev | prod
-      JAWSDB_URL: "postgres://admin:admin@snapshot-postgres:5432/snapshot-db"
-      USE_IPFS: "false"
-      IGNORE_VOTE_END_CONSTRAINT: "true"
-    depends_on:
-      - snapshot-postgres
-    ports:
-      - 8081:8080
-    volumes:
-      - .:/home/node/app
+  # snapshot-hub:
+  #   build:
+  #     # Use the development `Dockerfile.dev`
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   container_name: snapshot-hub
+  #   env_file:
+  #     - ./.env.local
+  #   environment:
+  #     PORT: 8080
+  #     ENV: "local" # local | dev | prod
+  #     JAWSDB_URL: "postgres://admin:admin@snapshot-postgres:5432/snapshot-db"
+  #     USE_IPFS: "false"
+  #     IGNORE_VOTE_END_CONSTRAINT: "true"
+  #   depends_on:
+  #     - snapshot-postgres
+  #   ports:
+  #     - 8081:8080
+  #   volumes:
+  #     - .:/home/node/app
 
   # Snapshot Postgres instance
   snapshot-postgres:
