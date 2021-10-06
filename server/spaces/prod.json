@@ -103,5 +103,26 @@
       "defaultTab": "all",
       "minScore": 1
     }
+  },
+  "fox": {
+    "token": "0x8AFe527dd42B1DF15387f9555E00E798843F4175",
+    "name": "Fox DAO",
+    "network": "1",
+    "symbol": "FOX",
+    "skin": "fox",
+    "strategies": [
+      {
+        "name": "moloch",
+        "params": {
+          "address": "0x8AFe527dd42B1DF15387f9555E00E798843F4175",
+          "symbol": "FOX",
+          "decimals": 18
+        }
+      }
+    ],
+    "filters": {
+      "defaultTab": "all",
+      "minScore": 1
+    }
   }
 }
